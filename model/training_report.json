@@ -1,0 +1,15 @@
+{
+  "classes": [
+    "Minador",
+    "Phoma",
+    "Roya",
+    "Sano"
+  ],
+  "val_accuracy": 0.6518105864524841,
+  "val_loss": 0.6816679239273071,
+  "epochs_ran": 7,
+  "img_size": [
+    128,
+    128
+  ]
+}
