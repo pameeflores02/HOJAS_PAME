@@ -28,16 +28,13 @@ from utils.pdf_utils import build_pdf_report
 # Configuración general de la página
 # ----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="AgroDetect | Diagnóstico Foliar de Café",
-    page_icon="🍃",
+    page_title="AgroDetect | Diagnóstico Foliar de Café | Claudia Aguilar",
+    page_icon="🍃🍃",
     layout="wide",
     initial_sidebar_state="collapsed",
 )
 
-# ----------------------------------------------------------------------------
-# Estilos (inspirados en la maqueta: fondo crema, tarjetas blancas, acentos
-# verdes/tierra, tipografía serif para títulos)
-# ----------------------------------------------------------------------------
+
 st.markdown("""
 <style>
     #MainMenu, footer, header {visibility: hidden;}
@@ -125,17 +122,15 @@ st.markdown("""
 
 # ----------------------------------------------------------------------------
 # Estado de sesión
-# ----------------------------------------------------------------------------
+
 if "history" not in st.session_state:
-    st.session_state.history = []  # lista de dicts: {label, confidence, timestamp}
+    st.session_state.history = [] 
 if "last_result" not in st.session_state:
-    st.session_state.last_result = None  # dict con toda la info del último diagnóstico
+    st.session_state.last_result = None  
 
 GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", None) if hasattr(st, "secrets") else None
 
-# ----------------------------------------------------------------------------
-# Encabezado
-# ----------------------------------------------------------------------------
+
 st.markdown("<h2 class='agro-title'>🍃 AgroDetect &nbsp;|&nbsp; Diagnóstico Foliar de Café</h2>", unsafe_allow_html=True)
 st.markdown(
     "<div class='agro-subtitle'>Servicio web de Computación en la Nube para la detección temprana de "
@@ -304,6 +299,6 @@ with col_right:
 
 st.markdown(
     "<div style='text-align:center; color:#9B927E; font-size:0.78rem; margin-top:1.5rem;'>"
-    "© 2026 AgroDetect · Soporte HICAFE · Proyecto académico de Computación en la Nube</div>",
+    "© 2026 AgroDetect · Soporte HICAFE · Proyecto académico de Computación en la Nube- By: Claudia Aguilar</div>",
     unsafe_allow_html=True,
 )
