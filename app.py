@@ -28,7 +28,7 @@ from utils.pdf_utils import build_pdf_report
 # Configuración general de la página
 # ----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="AgroDetect | Diagnóstico Foliar de Café | Claudia Aguilar",
+    page_title="AgroDetect | Claudia Aguilar",
     page_icon="🍃🍃",
     layout="wide",
     initial_sidebar_state="collapsed",
@@ -131,7 +131,7 @@ if "last_result" not in st.session_state:
 GROQ_API_KEY = st.secrets.get("GROQ_API_KEY", None) if hasattr(st, "secrets") else None
 
 
-st.markdown("<h2 class='agro-title'>🍃 AgroDetect &nbsp;|&nbsp; Diagnóstico Foliar de Café</h2>", unsafe_allow_html=True)
+st.markdown("<h2 class='agro-title'>🍃 AgroDetect &nbsp;|&nbsp; Diagnóstico Foliar de Café | Claudia </h2>", unsafe_allow_html=True)
 st.markdown(
     "<div class='agro-subtitle'>Servicio web de Computación en la Nube para la detección temprana de "
     "enfermedades y plagas en hojas de café mediante Inteligencia Artificial.</div>",
